@@ -31,11 +31,11 @@ const quickQuestions = [
 ];
 
 const botResponses: Record<string, string> = {
-  timetable: "📅 **Today's Schedule:**\n\n• 9:00 AM - Data Structures (Room 301)\n• 11:00 AM - Database Management (Lab 2)\n• 2:00 PM - Software Engineering (Room 405)\n• 4:00 PM - Tutorial Session",
-  exam: "📝 **Upcoming Exams:**\n\n• Feb 15 - Data Structures (10:00 AM)\n• Feb 18 - Database Management (2:00 PM)\n• Feb 22 - Software Engineering (10:00 AM)\n\nDon't forget to collect your hall ticket!",
-  attendance: "✅ **Your Attendance Summary:**\n\n• Data Structures: 85%\n• Database Management: 92%\n• Software Engineering: 78%\n• Overall: 85%\n\nYou're doing great! Keep it up!",
-  placement: "💼 **Active Placement Drives:**\n\n1. **TechCorp Inc.** - Software Developer\n   • Package: ₹12 LPA\n   • Deadline: Feb 10\n\n2. **DataSoft Solutions** - Data Analyst\n   • Package: ₹8 LPA\n   • Deadline: Feb 15\n\nRegister through the placement portal!",
-  default: "I'm here to help! You can ask me about:\n\n• 📅 Timetable\n• 📝 Exams\n• ✅ Attendance\n• 💼 Placements\n\nWhat would you like to know?",
+  timetable: "📅 **Today's Schedule (Monday, Feb 3, 2026):**\n\n| Time | Subject | Faculty | Room |\n|------|---------|---------|------|\n| 9:00 AM | Data Structures | Dr. Sharma | Room 301 |\n| 11:00 AM | Database Management | Prof. Gupta | Lab 2 |\n| 2:00 PM | Software Engineering | Dr. Patel | Room 405 |\n| 4:00 PM | Tutorial Session | TA Rahul | Room 102 |\n\n**Tomorrow:** Operating Systems, Computer Networks, Mini Project Lab",
+  exam: "📝 **Upcoming Examinations:**\n\n**Internal Assessments (IA-2):**\n| Date | Subject | Time | Venue |\n|------|---------|------|-------|\n| Feb 15 | Data Structures | 10:00 AM | Hall A |\n| Feb 17 | Database Management | 2:00 PM | Hall B |\n| Feb 19 | Software Engineering | 10:00 AM | Hall A |\n| Feb 21 | Operating Systems | 2:00 PM | Hall C |\n\n**Semester End Exams:** April 15 - May 5, 2026\n\n📌 **Note:** Hall tickets available from Feb 10. Collect from Exam Cell (Block A, Room 105)",
+  attendance: "✅ **Your Attendance Summary (as of Feb 3, 2026):**\n\n| Subject | Present | Total | Percentage | Status |\n|---------|---------|-------|------------|--------|\n| Data Structures | 34 | 40 | 85% | ✅ Safe |\n| Database Management | 37 | 40 | 92% | ✅ Safe |\n| Software Engineering | 31 | 40 | 78% | ⚠️ Warning |\n| Operating Systems | 36 | 40 | 90% | ✅ Safe |\n| Computer Networks | 33 | 40 | 82% | ✅ Safe |\n\n**Overall Attendance:** 85.4%\n**Minimum Required:** 75%\n\n⚠️ **Alert:** Attend next 3 Software Engineering classes to reach safe zone!",
+  placement: "💼 **Active Placement Drives (Feb 2026):**\n\n**1. Google India** 🌟\n   • Role: Software Engineer (L3)\n   • Package: ₹32 LPA + Stocks\n   • Eligibility: CGPA ≥ 8.0, No backlogs\n   • Last Date: Feb 8, 2026\n\n**2. Microsoft** 🌟\n   • Role: SDE-1\n   • Package: ₹28 LPA\n   • Eligibility: CGPA ≥ 7.5\n   • Last Date: Feb 12, 2026\n\n**3. Infosys** \n   • Role: Systems Engineer\n   • Package: ₹6.5 LPA\n   • Eligibility: CGPA ≥ 6.0\n   • Last Date: Feb 15, 2026\n\n**4. TCS Digital**\n   • Role: Digital Engineer\n   • Package: ₹9 LPA\n   • Eligibility: CGPA ≥ 7.0\n   • Last Date: Feb 18, 2026\n\n**5. Amazon**\n   • Role: SDE Intern (6 months + PPO)\n   • Stipend: ₹60,000/month\n   • Eligibility: 3rd Year, CGPA ≥ 7.5\n   • Last Date: Feb 20, 2026\n\n📍 **Upcoming Campus Visits:** Wipro (Feb 25), Accenture (Mar 2), Deloitte (Mar 8)\n\n👉 Register via Placement Portal: placement.smartcollege.edu",
+  default: "👋 Hello! I'm your **SmartCollege AI Assistant**.\n\nI can help you with:\n\n• 📅 **Timetable** - Today's classes, weekly schedule, room changes\n• 📝 **Exams** - Dates, syllabus, hall tickets, results\n• ✅ **Attendance** - Subject-wise %, shortage alerts\n• 💼 **Placements** - Active drives, company details, eligibility\n• 📚 **Library** - Book availability, due dates\n• 💰 **Fees** - Payment status, receipts, deadlines\n\nJust type your question or tap a quick option below!",
 };
 
 const StudentDashboard = () => {
@@ -138,28 +138,28 @@ const StudentDashboard = () => {
                 <Calendar className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-sm font-medium text-foreground">Today's Classes</p>
-                  <p className="text-xs text-muted-foreground">4 lectures</p>
+                  <p className="text-xs text-muted-foreground">4 lectures • Dr. Sharma first</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-secondary">
                 <CheckCircle className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-sm font-medium text-foreground">Attendance</p>
-                  <p className="text-xs text-muted-foreground">85% Overall</p>
+                  <p className="text-xs text-muted-foreground">85.4% Overall ✅</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-secondary">
                 <FileText className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-sm font-medium text-foreground">Next Exam</p>
-                  <p className="text-xs text-muted-foreground">Feb 15, 2026</p>
+                  <p className="text-xs text-muted-foreground">Feb 15 • Data Structures</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-secondary">
                 <Briefcase className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-sm font-medium text-foreground">Active Drives</p>
-                  <p className="text-xs text-muted-foreground">2 companies</p>
+                  <p className="text-xs text-muted-foreground">5 companies • Google, Microsoft...</p>
                 </div>
               </div>
             </div>
@@ -199,10 +199,15 @@ const StudentDashboard = () => {
               <Menu className="h-5 w-5" />
             </Button>
             <div className="flex items-center gap-2">
-              <Bot className="h-5 w-5 text-primary" />
-              <h1 className="font-display text-lg font-semibold text-foreground">
-                College Assistant
-              </h1>
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-primary">
+                <GraduationCap className="h-4 w-4 text-primary-foreground" />
+              </div>
+              <div>
+                <h1 className="font-display text-lg font-semibold text-foreground">
+                  Student Portal
+                </h1>
+                <p className="text-xs text-muted-foreground hidden sm:block">SmartCollege Institute of Technology</p>
+              </div>
             </div>
           </div>
           <Button 
